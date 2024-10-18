@@ -1,0 +1,3 @@
+﻿  Project.cpp
+E:\Facultate\OOP\Balan_Andrei_ActivitatePOOID2024\Project\Project.cpp(4,6): warning C4326: return type of 'main' should be 'int' instead of 'void'
+  Project.vcxproj -> E:\Facultate\OOP\Balan_Andrei_ActivitatePOOID2024\Project\x64\Debug\Project.exe
