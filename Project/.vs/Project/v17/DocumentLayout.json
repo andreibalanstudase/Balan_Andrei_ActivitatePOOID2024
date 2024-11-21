@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\Facultate\\OOP\\Balan_Andrei_ActivitatePOOID2024\\Project\\",
+  "WorkspaceRootPath": "E:\\Facultate\\OOP\\Balan_Andrei_ActivitatePOOID2024\\Balan_Andrei_ActivitatePOOID2024\\Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D81D0A15-5FED-4147-A142-7B2256439E9B}|Project.vcxproj|E:\\Facultate\\OOP\\Balan_Andrei_ActivitatePOOID2024\\Project\\Project.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{D81D0A15-5FED-4147-A142-7B2256439E9B}|Project.vcxproj|E:\\Facultate\\OOP\\Balan_Andrei_ActivitatePOOID2024\\Balan_Andrei_ActivitatePOOID2024\\Project\\Project.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{D81D0A15-5FED-4147-A142-7B2256439E9B}|Project.vcxproj|solutionrelative:Project.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
@@ -20,11 +20,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Project.cpp",
-              "DocumentMoniker": "E:\\Facultate\\OOP\\Balan_Andrei_ActivitatePOOID2024\\Project\\Project.cpp",
+              "DocumentMoniker": "E:\\Facultate\\OOP\\Balan_Andrei_ActivitatePOOID2024\\Balan_Andrei_ActivitatePOOID2024\\Project\\Project.cpp",
               "RelativeDocumentMoniker": "Project.cpp",
-              "ToolTip": "E:\\Facultate\\OOP\\Balan_Andrei_ActivitatePOOID2024\\Project\\Project.cpp",
+              "ToolTip": "E:\\Facultate\\OOP\\Balan_Andrei_ActivitatePOOID2024\\Balan_Andrei_ActivitatePOOID2024\\Project\\Project.cpp",
               "RelativeToolTip": "Project.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAkwIMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-10-18T19:02:52.231Z",
               "EditorCaption": ""
