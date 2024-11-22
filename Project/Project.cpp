@@ -1,4 +1,4 @@
-#define CRT_SECURE_NO_WARNINGS
+#define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include <string>
 #include <cstring>
@@ -24,7 +24,15 @@ public:
     // Constructorul cu parametrii
     Autobuz(int capacitate, int nrPersoaneImbarcate, const char* producator) : idAutobuz(++nrAutobuze) {
         this->capacitate = capacitate;
-        this->nrPersoaneImbarcate = nrPersoaneImbarcate;
+        if (nrPersoaneImbarcate <= capacitate) 
+        {
+            this->nrPersoaneImbarcate = nrPersoaneImbarcate;
+        }
+        else 
+        {
+            this->nrPersoaneImbarcate = capacitate;
+            cout << "Numarul de persoane imbarcate depaseste capacitatea. Oameni ramasi de imbarcat:" << nrPersoaneImbarcate - capacitate << endl;
+        }
         this->producator = new char[strlen(producator) + 1];
         strcpy(this->producator, producator);
     }
@@ -78,12 +86,24 @@ public:
 
     // Setter numar persoane imbarcate
     void setNrPersoaneImbarcate(int nrPersoaneImbarcate) {
-        this->nrPersoaneImbarcate = nrPersoaneImbarcate;
+        if (nrPersoaneImbarcate <= capacitate)
+        {
+            this->nrPersoaneImbarcate = nrPersoaneImbarcate;
+        }
+        else
+        {
+            this->nrPersoaneImbarcate = capacitate;
+            cout << "Numarul de persoane imbarcate depaseste capacitatea. Oameni ramasi de imbarcat:" << nrPersoaneImbarcate - capacitate << endl;
+        }
     }
 
     // Getter locuri libere (diferenta intre capacitate si numarul de persoane imbarcate)
     int getLocuriLibere() {
         return (this->capacitate - this->nrPersoaneImbarcate);
+    }
+
+    char* getProducator() {
+        return this->producator;
     }
 
     // Destructor in care se sterge pointerul pentru a evita memory leaks
@@ -99,7 +119,7 @@ public:
 
 // Supraincarcarea operatorului <<
 ostream& operator<< (ostream& oStream, Autobuz& autobuz) {
-    oStream << autobuz.getIdAutobuz() << "; " << autobuz.getCapacitate() << "; " << autobuz.getNrPersoaneImbarcate();
+    oStream <<"Autobuzul are :" << "id: " << autobuz.getIdAutobuz() << "; " << "capacitate: " << autobuz.getCapacitate() << "; " <<"nr. persoane imbarcate: " << autobuz.getNrPersoaneImbarcate() << "; " << "locuri libere: " << autobuz.getLocuriLibere() << "; " << "producator: " << autobuz.getProducator()<< endl;
     return oStream;
 }
 
@@ -124,9 +144,13 @@ int main() {
     Autobuz autobuz1;
     cout << autobuz1.getCapacitate() << endl;
     cout << autobuz1.getNrPersoaneImbarcate() << endl;
+    autobuz1.setNrPersoaneImbarcate(50);
+    cout << autobuz1.getNrPersoaneImbarcate() << endl;
     Autobuz autobuz2(40, 20, "Mercedes");
+    cout << autobuz2 << endl;
     Autobuz autobuz3 = autobuz2;
-    autobuz3.getNrPersoaneImbarcate();
+    autobuz3.getLocuriLibere();
+    cout << autobuz3 << endl;
     autobuz3 > autobuz1;
     return 0;
 }
