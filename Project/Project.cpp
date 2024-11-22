@@ -119,7 +119,7 @@ public:
 
 // Supraincarcarea operatorului <<
 ostream& operator<< (ostream& oStream, Autobuz& autobuz) {
-    oStream <<"Autobuzul are :" << "id: " << autobuz.getIdAutobuz() << "; " << "capacitate: " << autobuz.getCapacitate() << "; " <<"nr. persoane imbarcate: " << autobuz.getNrPersoaneImbarcate() << "; " << "locuri libere: " << autobuz.getLocuriLibere() << "; " << "producator: " << autobuz.getProducator()<< endl;
+    oStream <<"Autobuzul are :" << "id: " << autobuz.idAutobuz << "; " << "capacitate: " << autobuz.capacitate << "; " <<"nr. persoane imbarcate: " << autobuz.nrPersoaneImbarcate << "; " << "locuri libere: " << autobuz.getLocuriLibere() << "; " << "producator: " << autobuz.producator << endl;
     return oStream;
 }
 
@@ -149,6 +149,8 @@ int main() {
     Autobuz autobuz2(40, 20, "Mercedes");
     cout << autobuz2 << endl;
     Autobuz autobuz3 = autobuz2;
+    Autobuz autobuz4 = Autobuz(autobuz1);
+    cout << autobuz4 << endl;
     autobuz3.getLocuriLibere();
     cout << autobuz3 << endl;
     autobuz3 > autobuz1;
